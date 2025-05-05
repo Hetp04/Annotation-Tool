@@ -1,0 +1,100 @@
+.app {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #282c34;
+  color: white;
+}
+
+.app-header {
+  padding: 2rem;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  color: #61dafb;
+}
+
+.demo-window {
+  min-height: 400px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.annotation-options {
+  padding: 1rem;
+}
+
+.annotation-option {
+  margin-bottom: 1.5rem;
+}
+
+/* Toast Notification Styles */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast-success {
+  background-color: #4CAF50;
+}
+
+.toast-error {
+  background-color: #F44336;
+}
+
+.toast-info {
+  background-color: #2196F3;
+}
+
+/* Loading dots animation */
+.loading-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.loading-dots span {
+  width: 8px;
+  height: 8px;
+  background-color: #666;
+  border-radius: 50%;
+  animation: loading-dots 1.4s infinite ease-in-out both;
+}
+
+.loading-dots span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.loading-dots span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes loading-dots {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+} 
